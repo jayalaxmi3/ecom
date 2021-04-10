@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ecommerce Cart Website</title>
+	<style type="text/css">
+		@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	
+	*{	margin: 0;	padding: 0;	font-family: Century Gothic;}
+	header{
+		background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../backpic2.jpg);
+		height: 100vh; background-size: cover; background-position: center;
+	}
+	.header2{ background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../backpic.jpg);
+		height: 100vh;	background-size: cover;	background-position: center; }
+	h1{	width: 3%;	position: relative;	top: 60px;	left: 90%;	cursor: pointer;
+	}
+	.backname{	position: absolute;	top: 50%;	left: 50%;	transform: translate(-50%,-50%);
+	}
+	.backname h1{	color:#fff;	font-size: 70px;}
+	.down{	position: absolute;	top: 80%;	left: 50%;	transform: translate(-50%,-50%);}
+	.down h2{	color:#fff;	font-size: 180px;	top: 80%;	left:50%;}
+	.horiz{	margin-top: 70px;	display: flex;}
+	.types{	margin:70px 0;	display: flex;	justify-content: space-around;}
+	.vert{	flex-basis: 30%;	min-width: 250px;	margin-bottom: 30px;} 
+	.vert img{	width: 80%;}
+	.part{	max-width: 1080px;	margin: auto;	padding-left: 25px;	padding-right: 25px;}
+	
+	.btn{	/*display: inline-block; */	background: #4682B4;	color: #fff;	padding: 10px 20px;
+		border-radius: 12px;	margin:30px 0;	cursor: pointer;	border: none;	outline: none;	font-weight: bold;} 
+	.vert button:hover{	background-color: lavender;	color: #111;}
+	h1:before{
+		content: attr(data-count);	    color: white;	    position: absolute;	    right: 16px;	    font-size: 15px;
+	    text-align: center;	    top: -12px;	width: 20px;	height: 20px;	    background: red;
+	    border-radius: 50%;	    opacity: 0;	}
+	h1.zero:before{		opacity: 1;	}
+		.types{		margin: 100px auto;	width: 90%;	height: 400px;	display: flex;
+			justify-content: space-around;
+		}
+		.types div{	width: 22%;	height: 93%;	background:#fff;	padding: 1%;	position: relative;}
+		img{	width: 300px;	height: 186px;}
+
+		p{	margin: 5px;}
+		h6{	width: 50px;	padding: 5px;	 margin: 10px;	font-size: 15px;}
+		button{	padding: 5px;	background: red;	border: none;   outline: none;  font-weight: bold;
+		    color: #fafafa;  cursor: pointer;}
+		
+	.types div span{
+			position: absolute;	top: 14px;    left: 13px;   background: red;   width: 300px;   height: 186px;
+		    display: none;
+		}
+	.types div span img{
+			width: 100%;
+			height: 100%;
+		}
+
+	.select{	width: 60%;	height: 580px;	padding: 5%;	background: #222;	position: absolute;	top: -1000px;
+		left: 20%;	transition: 0.5s;		overflow-y: auto;		margin: auto;	}
+	.select.display{top: 10px;	}
+	.select div{width: 100%;	height: 200px;	display: flex;	padding: 5px;	border: 1px solid white;
+		position: relative;	margin: 5px auto;	}
+	.select div img{	width: 300px;	height: 100%;	}
+	.select div p{	padding: 35px;	color: white;	}
+	.select div button{	position: absolute;	left: 45%;	top: 50%;	color: white;	}
+	.select div button{	left: 60%;	top: 55%;	}
+	.select div span{	display: none;	}
+	.jay{	position: absolute;	top: 50%;	left: 50%;	transform: translate(-50%,-50%);
+	}
+	.jay h1{	color:#111;	font-size: 70px;}
+	.titles h1{
+			width: 80%; margin: auto	font-size: 50px;    position: relative;	    top: 60px;	    left: 10%;
+	}
+	h4{
+		color:green;
+	}
+		
+	
+	</style>
+</head>
+<body>
+	
+	<h1><i class=" fa fa-shopping-cart"></i></h1>
+	
+	<div class="titles">
+		<h1 style="text-align: center;">PICK YOUR TECH</h1>
+		</div>
+	<div class="titles">
+	<h1 style="text-align: center;">Laptops</h1>
+	</div>
+	<div class="types">
+			<div class="vert">
+				<img src="dellg3.jpg">
+				<p>Dell G3 3500<br> Gaming 15.6-inch Laptop (10th Gen Core i5-10300H/8GB/1TB + 256GB SSD/Win 10/4GB NVIDIA1650 Ti Graphics), Eclipse Black</p>
+				<h4>Rs. 90,999</h4>
+				<span></span>
+				<button  class="btn">Add to Cart</button>
+			</div>
+			<div class="vert">
+				<img src="asusstrix.jpg">
+				<p>ASUS ROG Strix G17 <br>17.3" FHD 120Hz Intel Core i7-10750H 10th Gen, GTX 1660Ti 6GB Graphics (16GB RAM/512GB NVMe SSD/Windows 10/Original Black/2.83 Kg), G712LU-H7015T + Xbox Game Pass for PC</p>
+				<h4>Rs. 98,999</h4>
+				<span></span>
+				<button  class="btn">Add to Cart</button>
+			</div>
+			
+			<div class="vert">
+				<img src="asustuf.jpg">
+				<p>ASUS TUF Gaming A15 Laptop 15.6" FHD 144Hz Ryzen 5 4600H, GTX 1650 4GB Graphics (8GB RAM/1TB HDD + 256GB NVMe SSD/Windows 10/Bonfire Black/2.30 Kg), FA506IH-AL057T</p>
+				<h4>Rs. 70,999</h4>
+				<span></span>
+				<button  class="btn">Add to Cart</button>	
+			</div>
+			<div class="vert">
+				<img src="msi.jpg">
+				<p>MSI Bravo 15 Ryzen 7 4800H 15.6" FHD Gaming Laptop (16GB/512GB SSD/144 Hz/Windows 10/ RX5500M,GDDR6 4GB/Black/1.86 kg), A4DDR-212IN</p>
+				<h4>Rs. 89,799</h4>
+				<span></span>
+				<button  class="btn">Add to Cart</button>
+			</div>
+	</div>
+	<div class="types">
+		<div class="vert">
+				<img src="legoin.jpg">
+				<p>Lenovo Legion 5 AMD Ryzen 7 4800H 15.6 inch Full HD Gaming Laptop (8GB/1TB HDD + 256GB SSD/Windows 10/120 Hz/NVIDIA GTX 1650Ti 4GB GDDR6 Graphics/Phantom Black/2.3Kg), 82B500BMIN</p>
+				<h4>Rs. 78,999</h4>
+				<span></span>
+				<button  class="btn">Add to Cart</button>
+			</div>
+			
+			<div class="vert">
+				<img src="omen.jpg">
+				<p>OMEN by HP Gaming Laptop, Ryzen 5-4600H, 8 GB DDR6 RAM, 6 GB NVIDIA 1650ti Graphics, 512 GB SSD, 15.6-inch FHD Screen, Windows 10 with Advanced Thermal Management, 15-en0002AX</p>
+				<h4>Rs. 69,999</h4>
+				<span></span>
+				<button  class="btn">Add to Cart</button>
+			</div>
+			<div class="vert">
+				<img src="zen.jpg">
+				<p>ASUS ZenBook Duo UX481FL-BM5811T Intel Core i5 10th Gen 14-inch FHD Thin and Light Laptop (8GB RAM/512GB NVMe SSD/Windows 10/2GB NVIDIA GeForce MX250 Graphics/ScreenPad Plus/1.50 Kg), Celestial Blue</p>
+				<h4>Rs. 79,999</h4>
+				<span></span>
+				<button  class="btn">Add to Cart</button>
+			</div>
+			<div class="vert">
+				<img src="xps.jpg">
+				<p>DELL XPS 9300 13.3-inch FHD Laptop (10th Gen Core i5-1035G1/8GB/512GB SSD/Windows 10 Home Plus & MS Office 365- 1Yr Subscription/Intel HD Graphics), Silver</p>
+				<h4>Rs. 1,29,999</h4>
+				<span></span>
+				<button  class="btn">Add to Cart</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="titles">
+	<h1 style="text-align: center;">Mobiles</h1>
+	</div>
+	<div class="types">
+		<div class="vert">
+			<img src="m51.jpg">
+			<p>Samsung Galaxy M51 (Celestial Black, 8GB RAM, 128GB Storage)</p>
+			<h4>Rs. 25,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		<div class="vert">
+			<img src="m31.jpg">
+			<p>Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)</p>
+			<h4>Rs. 30,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		
+		<div class="vert">
+			<img src="m12.jpg">
+			<p>Samsung Galaxy M12 (Blue,6GB RAM, 128GB Storage) 6000 mAh with 8nm Processor | True 48 MP Quad Camera | 90Hz Refresh Rate</p>
+			<h4>Rs. 10,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		<div class="vert">
+			<img src="i11.jpg">
+			<p>New Apple iPhone 11 (128GB) - White</p>
+			<h4>Rs. 90,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>	
+	</div>
+	<div class="types">
+		<div class="vert">
+			<img src="vivo.jpg">
+			<p>Vivo X60 (Shimmer Blue, 8GB RAM, 128GB Storage) with No Cost EMI/Additional Exchange Offers</p>
+			<h4>Rs. 25,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		<div class="vert">
+			<img src="oppo.jpg">
+			<p>OPPO F19 Pro (Fluid Black, 8GB RAM, 256GB Storage) with No Cost EMI/Additional Exchange Offers</p>
+			<h4>Rs. 18,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		<div class="vert">
+			<img src="5g.jpg">
+			<p>OnePlus Nord 5G (Gray Onyx, 12GB RAM, 256GB Storage)</p>
+			<h4>Rs. 25,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		<div class="vert">
+			<img src="poco.jpg">
+			<p>POCO M3 (Cool Blue, 6GB RAM, 64GB Storage)</p>
+			<h4>Rs. 14,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+	</div>
+	<div class="titles">
+	<h1 style="text-align: center;">Wearable Tech</h1>
+	</div>
+	<div class="types">
+		<div class="vert">
+			<img src="ace.jpg">
+			<p>CrossBeats Ace Metal Smart Watch Full Touch Men Women Fitness Tracker Blood Pressure Blood Oxygen Heart Rate Monitor Waterproof Exercise Smartwatch (Turquoise, Sea Green)</p>
+			<h4>Rs. 3,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		<div class="vert">
+			<img src="gen.jpg">
+			<p>Generic T500 Bluetooth SmartWatch- Black (IP67)</p>
+			<h4>Rs. 999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		
+		<div class="vert">
+			<img src="noise.jpg">
+			<p>Noise ColorFit Pro 3 Smart Watch with 1.55" HD Color Touch Screen, SpO2, Sleep, & Stress Monitor, Personalised Watch Faces, 5 ATM Waterproof (Rose Pink)</p>
+			<h4>Rs. 4,799</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		<div class="vert">
+			<img src="infi.jpg">
+			<p>Infinizy (1+1 Year Warranty) D116 Intelligence Bluetooth Monitor/Smart Bracelet/Health Bracelet/Smart Watch for Men/Activity Tracker with S530 Ultra Mini Calling Music Support Headset</p>
+			<h4>Rs. 899</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		
+	</div>
+	<div class="types">
+		
+		<div class="vert">
+			<img src="gear.jpg">
+			<p>i Gear Twinbod2.0 2in1 TWS Earbuds with inbuilt 3 watts Bluetooth Speaker, Charging case Cum Speaker, Voice Assistance, Auto on Function, in-Ear, Built in Microphone (Silver, Black)</p>
+			<h4>Rs. 799</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+		<div class="vert">
+			<img src="airdopes.jpg">
+			<p>boAt Airdopes 171 Bluetooth Truly Wireless Earbuds with Mic(Mysterious Blue)</p>
+			<h4>Rs. 2,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>	
+		<div class="vert">
+			<img src="torq.jpg">
+			<p>CrossBeats Torq Touch True Wireless in-Ear Headphones with In-Ear Detection, Wireless Charging 3D Sound 3Days Playtime Auto Pairing aptX Enabled 4 Microphone with ENC Headset Stereo Call Deep Bass</p>
+			<h4>Rs. 4,999</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>		
+		<div class="vert">
+			<img src="ptron.jpg">
+			<p>pTron Bassbuds in-Ear True Wireless Bluetooth 5.0 Headphones with Hi-Fi Deep Bass, 20Hrs Playtime with Case, Ergonomic Sweatproof Earbuds, Noise Isolation, Voice Assistance & Built-in Mic - (Black)</p>
+			<h4>Rs. 799</h4>
+			<span></span>
+			<button  class="btn">Add to Cart</button>
+		</div>
+				
+				
+	</div>
+	
+	<div class="select">
+		
+	</div>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+	var noti = document.querySelector('h1');
+	var select = document.querySelector('.select');
+	var button = document.getElementsByTagName('button');
+	for(var but of button){
+		but.addEventListener('click', (e)=>{
+			var add = Number(noti.getAttribute('data-count') || 0);
+			noti.setAttribute('data-count', add +1);
+			noti.classList.add('zero')
+			var parent = e.target.parentNode;
+			var clone = parent.cloneNode(true);
+			select.appendChild(clone);
+			clone.lastElementChild.innerText = "Buy-now";
+			if (clone) {
+				noti.onclick = ()=>{
+					select.classList.toggle('display');
+				}	
+			}
+		})
+	}	
+</script>
